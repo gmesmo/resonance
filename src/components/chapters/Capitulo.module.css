@@ -1,0 +1,11 @@
+.chapt {
+    color: white;
+    text-align: justify;
+    padding: 15px;
+}
+
+div :has(> .chapt) {
+    color: white;
+    padding-top: 15px;
+    background: linear-gradient(to bottom, #424242 0%, 10%, #000000 100%);
+}
