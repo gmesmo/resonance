@@ -1,10 +1,30 @@
+@media (max-width: 768px) {
+    #cover img {
+        width: 70vw;
+    }
+
+    #cover div {
+        margin: unset;
+        width: 100%;
+    }
+
+    #cover div .logo_ {
+        height: 110%;
+    }
+}
+
+@media (min-width: 769px) {
+    #cover div {
+        width: 35%;
+    }
+}
+
 #cover {
     display: flex;
     height: 60vh;
 }
 
 #cover div {
-    width: 35%;
     margin: 0 auto;
     text-align: center;
     position: relative;
