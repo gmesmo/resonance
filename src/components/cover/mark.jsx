@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './mark.module.css';
+import logo from '../../../public/MARK.png'
 
 const Cover = () => {
     const LogoCreate = () => {
         return(
-            <img src='../../mark.png' />
+            <img src={logo} />
         );
         
     }
