@@ -1,13 +1,58 @@
 #cover {
     display: flex;
+    height: 60vh;
 }
 
 #cover div {
-    padding: 4.5rem;
+    width: 35%;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    min-height: 100%;
 }
 
 #cover div h1 {
     font-size: 3rem;
+}
+
+#cover div .logo_ {
+    position: relative;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#cover div .logo_ img {
+    position: absolute;
+    transform:translate(-50%, 10%);
+    transition: all 0.5s;
+}
+
+#cover div .logo_:has(:hover) img {
+    top: 0;
+    left: 50%;
+    filter: unset;
+} 
+
+#cover .logo_ img:nth-child(1) {
+    top: -3%;
+    left: 57%;
+    filter: invert(89%) sepia(86%) saturate(4856%) hue-rotate(359deg) brightness(105%) contrast(104%);
+    opacity: 0.7;
+}
+
+#cover .logo_ img:nth-child(2) {
+    top: 6%;
+    left: 50%;
+    filter: invert(29%) sepia(96%) saturate(5761%) hue-rotate(294deg) brightness(114%) contrast(131%);
+    opacity: 0.7;
+}
+
+#cover .logo_ img:nth-child(3) {
+    top: -3%;
+    left: 43%;
+    filter: invert(84%) sepia(60%) saturate(3115%) hue-rotate(113deg) brightness(112%) contrast(104%);
+    opacity: 0.7;
+    z-index: -1;
+    color: #00ffff;
 }

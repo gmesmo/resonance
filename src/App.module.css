@@ -1,17 +1,3 @@
 body {
   background: #424242;
 }
-
-#promo {
-  width: 350px;
-  margin: 5rem auto;
-  text-align: center;
-}
-
-#promo img {
-  margin: 0 auto;
-}
-
-#promo h1 {
-  font-size: 3em;
-}
