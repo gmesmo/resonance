@@ -1,0 +1,13 @@
+#cover {
+    display: flex;
+}
+
+#cover div {
+    padding: 4.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cover div h1 {
+    font-size: 3rem;
+}
