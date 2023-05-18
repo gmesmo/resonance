@@ -9,7 +9,7 @@ const Capitulo = (props) => {
 
     return (    <section>
                     <h2>{props.title}</h2>
-                    <h5>{props.data}</h5>
+                    <h5>Lançamento: {props.data}</h5>
                     <div className={styles.chapt}>
                         {Texto}
                     </div>
