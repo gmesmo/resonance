@@ -52,7 +52,7 @@
 #cover div .logo_:has(:hover) img {
     top: 0;
     left: 50%;
-    filter: unset;
+    filter: invert(1);
 } 
 
 #cover .logo_ img:nth-child(1) {
