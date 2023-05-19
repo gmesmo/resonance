@@ -5,7 +5,15 @@
 }
 
 div :has(> .chapt) {
+    height: calc(100dvh - 6rem);
     color: white;
-    padding-top: 15px;
-    background: linear-gradient(to bottom, #424242 0%, 10%, #000000 100%);
+    padding: 3rem;
+    background: linear-gradient(to bottom, #424242 0%, 10%, #000000 80%, #424242 100%);
+}
+
+@media (max-width: 768px) {
+    
+    div :has(> .chapt) {
+        padding: 1rem;
+    }
 }

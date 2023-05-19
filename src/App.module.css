@@ -4,4 +4,5 @@ body {
 
 section :is(h1, h2, h5) {
   text-align: center;
+  color: white;
 }

@@ -1,0 +1,22 @@
+.chapterMiniature {
+    display: flex;
+    flex-direction: row;
+    margin: 0.15rem;
+    background: #7c7c7c;
+    color: white;
+    border-radius: 2rem;
+    justify-content: center;
+}
+
+.chaptNumber {
+    height: 2rem;
+    display: flex;
+    line-height: 2rem;
+    justify-content: center;
+    margin-right: 0.3rem;
+}
+
+.chaptTitle {
+    display:inline-flex;
+    line-height: 2rem;
+}
