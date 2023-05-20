@@ -8,7 +8,7 @@ div :has(> .chapt) {
     height: calc(100dvh - 6rem);
     color: white;
     padding: 3rem;
-    background: linear-gradient(to bottom, #424242 0%, 10%, #000000 80%, #424242 100%);
+    background: black;
 }
 
 @media (max-width: 768px) {

@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.chapterMiniature:first-of-type {
+    margin-top: 0.5rem;
+}
+
 .chaptNumber {
     height: 2rem;
     display: flex;
