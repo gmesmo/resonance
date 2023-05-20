@@ -8,6 +8,9 @@
     justify-content: center;
 }
 
+.chapterMiniature:hover {
+    cursor: pointer;
+}
 .chapterMiniature:first-of-type {
     margin-top: 0.5rem;
 }

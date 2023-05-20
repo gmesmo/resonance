@@ -1,46 +1,87 @@
-#Menu {
-    position: absolute;
-    top: calc(-100% + 2rem);
-    width: 100%;
-    height: 100%;
-    z-index: 10;
+@media (max-width: 768px) {
+    #Menu {
+        position: absolute;
+        top: calc(-100% + 2rem);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
 
-    background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.8);
 
-    border-radius: 0 0 2rem 2rem;
+        border-radius: 0 0 2rem 2rem;
 
-    transition: all 1s;
+        transition: all 1s;
+    }
+
+    #Menu.active {
+        top: -5px;
+        border-radius: 0px;
+    }
+
+    #ChapterSelector {
+        width: 50px;
+        height: 50px;
+        background: #252525e5;
+        z-index: 5;
+        transition: all 1s;
+    }
+
+    #ChapterSelector.active {
+        width: 100%;
+        height: 100%;
+    }
+
+    button {
+        position: absolute;
+        bottom: 5px;
+
+        width: 100%;
+        height: 2rem;
+        border-radius: 0 0 2rem 2rem;
+        border: unset;
+
+        font-size: 2rem;
+        color: white;
+
+        background: unset;
+    }
 }
 
-#Menu.active {
-    top: -5px;
-    border-radius: 0px;
-}
+@media (min-width: 768px) {
+    #Menu {
+        position: absolute;
+        top: 50%;
+        left: 0px;
 
-#ChapterSelector {
-    width: 50px;
-    height: 50px;
-    background: #252525e5;
-    z-index: 5;
-    transition: all 1s;
-}
+        transform: translate(-90%, -50%) ;
 
-#ChapterSelector.active {
-    width: 100%;
-    height: 100%;
-}
+        width: 20%;
+        display: flex;
 
-button {
-    position: absolute;
-    bottom: 5px;
+        background-color: black;
 
-    width: 100%;
-    height: 2rem;
-    border-radius: 0 0 2rem 2rem;
-    border: unset;
+        transition: all 0.5s;
+    }
 
-    font-size: 2rem;
-    color: white;
+    #Menu.active {
+        transform: translate(0px, -50%);
+    }
 
-    background: unset;
+    #Menu div{
+        flex: 15;
+    } 
+
+    #Menu div > * {
+        flex: unset;
+    }
+
+    button {
+        background: unset;
+        color: white;
+        font-size: 1.4rem;
+
+        border: 1px solid white;
+        border-radius: .5rem;
+        flex: 1;
+    }
 }
