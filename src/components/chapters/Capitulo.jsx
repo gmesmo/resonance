@@ -10,12 +10,7 @@ const Capitulo = (props) => {
     const chaptNumber = props.chaptNumber - 1;
 
     return (    <section>
-                    <h2>
-                        {chaptNumber > 0 ? 
-                            `Capítulo ${chaptNumber} - ` 
-                            : ``
-                        } {props.title}
-                    </h2>
+                    <h2>{chaptNumber > 0 ? `Capítulo ${chaptNumber} - ` : ``} {props.title}</h2>
                     <h5>Lançamento: {props.data}</h5>
                     <div className={styles.chapt}>
                         {Texto}
