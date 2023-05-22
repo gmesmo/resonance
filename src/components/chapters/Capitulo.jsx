@@ -2,7 +2,8 @@ import React from 'react';
 
 import styles from './Capitulo.module.css';
 import Typewriter from "typewriter-effect";
-import { type } from '@testing-library/user-event/dist/type';
+
+import DateCheck from '../UI/DateCheck/DateCheck';
 
 const Capitulo = (props) => {
     const Texto = props.text.map((text) =>
@@ -15,7 +16,7 @@ const Capitulo = (props) => {
 
     return (    <section key={props.chaptNumber}>
                     <h2>{chaptNumber > 0 ? `Capítulo ${chaptNumber} - ` : ``} {props.title}</h2>
-                    <h5>Lançamento: {props.data}</h5>
+                    <h5>Lançamento: <DateCheck data={props.data}/></h5>
                     <div className={styles.chapt}>
                         {Texto}
                     </div>
