@@ -1,10 +1,17 @@
 import React from 'react';
 
 import styles from './Capitulo.module.css';
+import Typewriter from "typewriter-effect";
 
 const Capitulo = (props) => {
     const Texto = props.text.map((text) =>
-        <p>{text}</p>
+        <Typewriter options={{delay: 5}}onInit={(typewriter) => {
+            typewriter
+
+            .typeString(text)
+            .start();
+        }} />
+        // <p>{text}</p>
     );
 
     const chaptNumber = props.chaptNumber - 1;
