@@ -5,12 +5,7 @@ import Typewriter from "typewriter-effect";
 
 const Capitulo = (props) => {
     const Texto = props.text.map((text) =>
-        <Typewriter options={{delay: 5}}onInit={(typewriter) => {
-            typewriter
-
-            .typeString(text)
-            .start();
-        }} />
+        <Typewriter options={{delay: 0.5, strings: [' ', text], autoStart: true, pauseFor: 2500}}/>
         // <p>{text}</p>
     );
 
