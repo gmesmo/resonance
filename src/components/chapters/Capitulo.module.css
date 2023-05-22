@@ -1,5 +1,4 @@
 .chapt {
-    color: white;
     text-align: justify;
     padding: 15px 15%;
 }
@@ -9,6 +8,10 @@ div :has(> .chapt) {
     color: white;
     padding: 3rem;
     background: black;
+}
+
+.chapt p {
+    text-indent: 3rem;
 }
 
 @media (max-width: 768px) {

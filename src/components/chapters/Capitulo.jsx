@@ -2,11 +2,13 @@ import React from 'react';
 
 import styles from './Capitulo.module.css';
 import Typewriter from "typewriter-effect";
+import { type } from '@testing-library/user-event/dist/type';
 
 const Capitulo = (props) => {
     const Texto = props.text.map((text) =>
-        <Typewriter options={{delay: 0.5, strings: [' ', text], autoStart: true, pauseFor: 2500}}/>
-        // <p>{text}</p>
+        <Typewriter options={{delay: 0.001}} onInit={(typewriter) => {
+            typewriter.pauseFor(3000).typeString(text).start();
+        }}/>
     );
 
     const chaptNumber = props.chaptNumber - 1;
