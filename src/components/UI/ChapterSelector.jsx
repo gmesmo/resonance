@@ -22,9 +22,9 @@ const ChapterSelector = (props) => {
 
     const renderButton = () => {
         if (isMobile) {
-            return(<button onClick={menuOpenHandler}>{isOpen ? <BsChevronUp /> : <BsChevronDown />}</button>)
+            return(<button className={styles.menuDrawer} onClick={menuOpenHandler}>{isOpen ? <BsChevronUp /> : <BsChevronDown />}</button>)
         }
-        return(<button onClick={menuOpenHandler}>{isOpen ? <BsChevronLeft /> : <BsChevronRight />}</button>)
+        return(<button className={styles.menuDrawer} onClick={menuOpenHandler}>{isOpen ? <BsChevronLeft /> : <BsChevronRight />}</button>)
     }
 
     return (

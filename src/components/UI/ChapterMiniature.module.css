@@ -1,29 +1,53 @@
 .chapterMiniature {
-    display: flex;
-    flex-direction: row;
     margin: 0.15rem;
     background: #7c7c7c;
     color: white;
     border-radius: 2rem;
     justify-content: center;
+    border: none;
 }
 
-.chapterMiniature:hover {
-    cursor: pointer;
-}
-.chapterMiniature:first-of-type {
-    margin-top: 0.5rem;
+@media (max-width: 768px) {
+    .chapterMiniature {        
+        width: calc(100% - 0.3rem);
+
+        margin-top: 0.5rem;
+    }
+
+    .chapterMiniature:hover {
+        cursor: pointer;
+        box-shadow: white 0px 0px 10px;
+    }
+
+    .chaptNumber {
+        height: 2rem;
+        display: flex;
+        line-height: 2rem;
+        justify-content: center;
+        margin-right: 0.3rem;
+    }
+
+    .chaptTitle {
+        display:inline-flex;
+        line-height: 2rem;
+    }
 }
 
-.chaptNumber {
-    height: 2rem;
-    display: flex;
-    line-height: 2rem;
-    justify-content: center;
-    margin-right: 0.3rem;
-}
+@media (min-width: 768px) {
 
-.chaptTitle {
-    display:inline-flex;
-    line-height: 2rem;
+    .chapterMiniature {
+        width: calc(50% - 0.6rem);
+        margin-left: 0.3rem;
+        aspect-ratio: 1;
+
+        font-size: 1.1rem;
+
+        transition: all 0.5s;
+        /* flex-direction: column; */
+    }
+
+    .chapterMiniature:hover {
+        box-shadow: rgb(175, 4, 175) 0px 0px 25px;
+    }
+
 }
