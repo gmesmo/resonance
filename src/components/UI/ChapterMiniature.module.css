@@ -36,9 +36,8 @@
 @media (min-width: 768px) {
 
     .chapterMiniature {
-        width: calc(50% - 0.6rem);
+        width: 95%;
         margin-left: 0.3rem;
-        aspect-ratio: 1;
 
         font-size: 1.1rem;
 

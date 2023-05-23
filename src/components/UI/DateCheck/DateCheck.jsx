@@ -7,15 +7,19 @@ const DateCheck = (props) => {
 
     // const [data, setData] = useState(moment(props.data, "DDMMYYYY").fromNow());
 
-    // var a = new Date(props.data);
-    // var b = moment().calendar();
+    var a = new Date(props.data);
+    var b = new Date();
     
+    var difference = b.getTime() - a.getTime() ;
 
-    return ( 
-            <>
-                {props.data}
-            </> 
-    );
+    var diff_day = difference / (1000 * 3600 * 24);
+
+    console.log(diff_day);
+    if (diff_day < 7) {
+        return(true);
+    }
+    
+    return (false);
 }
  
 export default DateCheck;

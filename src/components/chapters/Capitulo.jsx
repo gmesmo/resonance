@@ -14,9 +14,10 @@ const Capitulo = (props) => {
 
     const chaptNumber = props.chaptNumber - 1;
 
-    return (    <section key={props.chaptNumber}>
+
+    return (    <section key={`${props.chaptNumber} ${DateCheck(props.data) ? 'new' : 'old'}`}>
                     <h2>{chaptNumber > 0 ? `Capítulo ${chaptNumber} - ` : ``} {props.title}</h2>
-                    <h5>Lançamento: <DateCheck data={props.data}/></h5>
+                    <h5>Lançamento: {props.data}</h5>
                     <div className={styles.chapt}>
                         {Texto}
                     </div>
