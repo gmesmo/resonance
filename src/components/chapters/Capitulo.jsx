@@ -52,11 +52,7 @@ const Capitulo = (props) => {
       </h2>
       <h5>Lançamento: {data_cap}</h5>
       <div className={`${styles.chapt} ${skip && styles.skipped}`}>{Texto}</div>
-      {!skip && (
-        <Button classes={"skip"} onClick={skipHandler}>
-          SKIP
-        </Button>
-      )}
+      {!skip && <Button onClick={skipHandler}>SKIP</Button>}
     </section>
   );
 };

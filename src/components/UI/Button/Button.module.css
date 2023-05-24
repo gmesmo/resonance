@@ -2,19 +2,89 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  z-index: 5;
 
-  background-color: black;
+  background: black;
+
   padding: 1rem 2rem;
   color: white;
 
   border: 1px solid white;
   border-radius: 2rem;
 
-  transition: all 0.5s;
+  transition: box-shadow 0.5s;
+
+  overflow: hidden;
+
+  animation: loading 15s;
+  animation-fill-mode: forwards;
+}
+
+.skip::after {
+  content: "";
+
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -10;
+
+  height: 100%;
+  width: 100%;
+
+  background: white;
+  transition: all 1s;
+  filter: blur(3px);
+
+  animation: loading_after 15s;
+  animation-fill-mode: forwards;
+}
+
+.skip::before {
+  content: "";
+
+  position: absolute;
+  inset: 3px;
+
+  z-index: -1;
+
+  background-color: black;
+  border-radius: 2rem;
 }
 
 .skip:hover {
   box-shadow: rgb(175, 4, 175) 0px 0px 25px;
 
   cursor: pointer;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+    right: 2rem;
+  }
+  97% {
+    opacity: 1;
+    right: 2rem;
+  }
+  98% {
+    opacity: 0;
+    right: 2rem;
+  }
+  99% {
+    right: -10rem;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    right: -10rem;
+  }
+}
+
+@keyframes loading_after {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
 }
