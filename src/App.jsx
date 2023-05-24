@@ -19,6 +19,7 @@ function App() {
       page++;
       setPage(
         <Capitulo 
+          key={page}
           chaptNumber={page}
           title={capitulos.chapters[page].title}
           data={capitulos.chapters[page].release}

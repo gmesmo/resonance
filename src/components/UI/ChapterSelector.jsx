@@ -31,7 +31,7 @@ const ChapterSelector = (props) => {
         <div id={styles.Menu} className={isOpen ? styles.active : ''}>
             <div >
                 {Chapters.chapters.map((chapt, i) => (
-                    <ChapterMiniature key={i} title={chapt.title} number={chapt.number} release={chapt.release} selectedChapter={selectedChapterHandler}/>
+                    <ChapterMiniature key={chapt.number} title={chapt.title} number={chapt.number} release={chapt.release} selectedChapter={selectedChapterHandler}/>
                 ))}
             </div>
             {renderButton()}

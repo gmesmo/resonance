@@ -47,9 +47,35 @@ h5 {
 @media (max-width: 768px) {
     .chapt {
         padding: 15px;
+        padding-bottom: 5rem;
+    }
+
+    .new h5 {
+        width: 65%;
     }
     
     div :has(> .chapt) {
         padding: 1rem;
     }
+}
+
+.skip {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    
+    background-color: black;
+    padding: 1rem 2rem;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 2rem;
+
+    transition: all 0.5s;
+}
+
+.skip:hover {
+    box-shadow: rgb(175, 4, 175) 0px 0px 25px;
+
+    cursor: pointer;
 }
