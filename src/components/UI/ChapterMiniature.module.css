@@ -2,15 +2,19 @@
     margin: 0.15rem;
     background: #7c7c7c;
     color: white;
-    border-radius: 2rem;
+    
     justify-content: center;
     border: none;
+
+    padding: 0.5rem;
+
+    position: relative;
 }
 
 @media (max-width: 768px) {
     .chapterMiniature {        
         width: calc(100% - 0.3rem);
-
+        border-radius: 2rem;
         margin-top: 0.5rem;
     }
 
@@ -31,22 +35,62 @@
         display:inline-flex;
         line-height: 2rem;
     }
+    
+    .chapterMiniature.new::after {
+        content: "NOVO";
+
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        background-color: orange;
+        padding: .5rem .8rem;
+        border-radius: 1rem;
+    }
 }
 
 @media (min-width: 768px) {
 
     .chapterMiniature {
-        width: 95%;
+        width: 45%;
         margin-left: 0.3rem;
 
         font-size: 1.1rem;
 
         transition: all 0.5s;
-        /* flex-direction: column; */
+
+        justify-content: center;
+        aspect-ratio: 1;
+        border-radius: 1rem;
     }
 
     .chapterMiniature:hover {
         box-shadow: rgb(175, 4, 175) 0px 0px 25px;
     }
 
+    .chapterMiniature.new::after {
+        content: "NOVO";
+
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: orange;
+        font-size: 1rem;
+
+        border-radius: 1rem;
+        overflow: hidden;
+
+        transition: 0.5s all;
+        text-indent: 1rem;
+    }
+
+    .chapterMiniature.new:hover::after {
+        width: 50%;
+        height: 1rem;
+        text-indent: unset;
+    }
 }
+

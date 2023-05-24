@@ -55,14 +55,12 @@
 
         transform: translate(-100%, 0%) ;
 
-        width: 15%;
+        width: 20%;
         height: calc(100dvh - 2px);
-        display: flex;
-        flex-direction: row;
         border-right: 1px solid white;
         background-color: black;
 
-        transition: all 0.5s;
+        transition: all 0.5s ease-in;
     }
 
     #Menu.active {
@@ -71,11 +69,14 @@
 
     #Menu div{
         flex: 15;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     } 
 
-    #Menu div > * {
+    /* #Menu div > * {
         flex: unset;
-    }
+    } */
 
     #Menu .menuDrawer {
         position: absolute;

@@ -7,7 +7,7 @@ div :has(> .chapt) {
     height: calc(100dvh - 6rem);
     color: white;
     padding: 3rem;
-    background: black;
+    /* background: black; */
 }
 
 .chapt p {
@@ -15,6 +15,7 @@ div :has(> .chapt) {
 }
 
 h5 {
+    min-width: 210px;
     width: 18%;
     margin: 0 auto;
     padding: 0.5rem;
@@ -42,6 +43,12 @@ h5 {
     top: 0;
 
     background-color: orange;
+}
+
+@media (max-width: 1680px) {
+    h5 {
+        width: 20%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -78,4 +85,17 @@ h5 {
     box-shadow: rgb(175, 4, 175) 0px 0px 25px;
 
     cursor: pointer;
+}
+
+.skipped p {
+    animation: fade_in 3s;
+    transition: .5s all;
+}
+
+@keyframes fade_in {
+    0% {
+        color: transparent;
+    } 100% {
+        color: white;
+    }
 }

@@ -1,5 +1,6 @@
 body {
-  background: black;
+  background: #2b2b2b;
+  height: 100%;
 }
 
 section :is(h1, h2, h5) {
