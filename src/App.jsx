@@ -5,7 +5,7 @@ import Capitulo from './components/chapters/Capitulo';
 
 import capitulos from './components/chapters/list/chapters.json'
 
-import ChapterSelector from './components/UI/ChapterSelector';
+import ChapterSelector from './components/UI/Menu/ChapterSelector';
 import { useState } from 'react';
 
 function App() {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { isMobile } from 'react-device-detect';
 
 import styles from './ChapterSelector.module.css';
-import Chapters from '../chapters/list/chapters';
+import Chapters from '../../chapters/list/chapters';
 import ChapterMiniature from './ChapterMiniature';
 
 import { BsChevronDown, BsChevronUp, BsChevronLeft, BsChevronRight } from "react-icons/bs";

@@ -16,9 +16,12 @@ div :has(> .chapt) {
 
 h5 {
     min-width: 210px;
-    width: 18%;
+    width: 15%;
     margin: 0 auto;
     padding: 0.5rem;
+
+    padding-left: 5%;
+
 }
 
 .new h5 {
