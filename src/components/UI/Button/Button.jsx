@@ -1,7 +1,13 @@
 import React from "react";
 
+import styles from "./Button.module.css";
+
 const Button = (props) => {
-  return <></>;
+  return (
+    <button className={styles.skip} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;

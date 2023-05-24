@@ -1,104 +1,83 @@
 .chapt {
-    text-align: justify;
-    padding: 15px 15%;
+  text-align: justify;
+  padding: 15px 15%;
 }
 
 div :has(> .chapt) {
-    height: calc(100dvh - 6rem);
-    color: white;
-    padding: 3rem;
-    /* background: black; */
+  height: calc(100dvh - 6rem);
+  color: white;
+  padding: 3rem;
+  /* background: black; */
 }
 
 .chapt p {
-    text-indent: 3rem;
+  text-indent: 3rem;
 }
 
 h5 {
-    min-width: 210px;
-    width: 15%;
-    margin: 0 auto;
-    padding: 0.5rem;
+  min-width: 210px;
+  width: 15%;
+  margin: 0 auto;
+  padding: 0.5rem;
 
-    padding-left: 5%;
-
+  padding-left: 5%;
 }
 
 .new h5 {
-    border: orange 1px solid;
-    border-radius: 2rem;
+  border: orange 1px solid;
+  border-radius: 2rem;
 
-    text-align: left;
+  text-align: left;
 
-    position: relative;
+  position: relative;
 
-    text-indent: 2%;
+  text-indent: 2%;
 }
 
 .new h5::after {
-    content: "NOVO";
+  content: "NOVO";
 
-    padding: 0.5rem;
-    border-radius: 2rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
 
-    position: absolute;
-    right: 0;
-    top: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 
-    background-color: orange;
+  background-color: orange;
 }
 
 @media (max-width: 1680px) {
-    h5 {
-        width: 20%;
-    }
+  h5 {
+    width: 20%;
+  }
 }
 
 @media (max-width: 768px) {
-    .chapt {
-        padding: 15px;
-        padding-bottom: 5rem;
-    }
+  .chapt {
+    padding: 15px;
+    padding-bottom: 5rem;
+  }
 
-    .new h5 {
-        width: 65%;
-    }
-    
-    div :has(> .chapt) {
-        padding: 1rem;
-    }
-}
+  .new h5 {
+    width: 65%;
+  }
 
-.skip {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    
-    background-color: black;
-    padding: 1rem 2rem;
-    color: white;
-
-    border: 1px solid white;
-    border-radius: 2rem;
-
-    transition: all 0.5s;
-}
-
-.skip:hover {
-    box-shadow: rgb(175, 4, 175) 0px 0px 25px;
-
-    cursor: pointer;
-}
-
-.skipped p {
-    animation: fade_in 3s;
-    transition: .5s all;
+  div :has(> .chapt) {
+    padding: 1rem;
+  }
 }
 
 @keyframes fade_in {
-    0% {
-        color: transparent;
-    } 100% {
-        color: white;
-    }
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.skipped p {
+  animation: fade_in 3s;
+  transition: 0.5s all;
 }
