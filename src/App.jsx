@@ -1,12 +1,12 @@
-import styles from './App.module.css';
-import Cover from './components/cover/mark';
+import styles from "./App.module.css";
+import Cover from "./components/cover/mark";
 
-import Capitulo from './components/chapters/Capitulo';
+import Capitulo from "./components/chapters/Capitulo";
 
-import capitulos from './components/chapters/list/chapters.json'
+import capitulos from "./components/chapters/list/chapters.json";
 
-import ChapterSelector from './components/UI/Menu/ChapterSelector';
-import { useState } from 'react';
+import ChapterSelector from "./components/UI/Menu/ChapterSelector";
+import { useState } from "react";
 
 function App() {
   const [page, setPage] = useState(<Cover />);
@@ -18,7 +18,7 @@ function App() {
     } else {
       page++;
       setPage(
-        <Capitulo 
+        <Capitulo
           key={page}
           chaptNumber={page}
           title={capitulos.chapters[page].title}
@@ -27,14 +27,11 @@ function App() {
         />
       );
     }
-    
-  }
-
-
+  };
 
   return (
     <div className="App">
-      <ChapterSelector pageChange={onPageChange}/>
+      <ChapterSelector pageChange={onPageChange} />
 
       {page}
 
