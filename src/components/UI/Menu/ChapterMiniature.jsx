@@ -13,9 +13,7 @@ const ChapterMiniature = (props) => {
     <>
       <button
         key={props.number}
-        className={`${styles.chapterMiniature} ${
-          <DateCheck data={props.release} /> ? `${styles.new}` : ""
-        }`}
+        className={`${styles.chapterMiniature}`}
         onClick={selectChapterHandler}
       >
         <NumberVerify className={styles.chaptNumber} number={props.number}>

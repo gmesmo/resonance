@@ -43,17 +43,23 @@ const Capitulo = (props) => {
   let data_cap = moment(props.data, "YYYY-MM-DD").format("L");
 
   return (
-    <section
-      key={props.chaptNumber}
-      className={<DateCheck data={props.data} /> ? `${styles.new}` : "old"}
-    >
-      <h2>
-        {chaptNumber > 0 ? `Capítulo ${chaptNumber} - ` : ``} {props.title}
-      </h2>
-      <h5>Lançamento: {data_cap}</h5>
-      <div className={`${styles.chapt} ${skip && styles.skipped}`}>{Texto}</div>
-      {!skip && <Button onClick={skipHandler}>SKIP</Button>}
-    </section>
+    <>
+      <DateCheck
+        key={props.chaptNumber}
+        classList={``}
+        style_={styles}
+        data={data_cap}
+      >
+        <h2>
+          {chaptNumber > 0 ? `Capítulo ${chaptNumber} - ` : ``} {props.title}
+        </h2>
+        <h5>Lançamento: {data_cap}</h5>
+        <div className={`${styles.chapt} ${skip && styles.skipped}`}>
+          {Texto}
+        </div>
+        {!skip && <Button onClick={skipHandler}>SKIP</Button>}
+      </DateCheck>
+    </>
   );
 };
 
