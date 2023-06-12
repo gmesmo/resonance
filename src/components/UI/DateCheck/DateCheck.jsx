@@ -12,17 +12,32 @@ const DateCheck = (props) => {
   var difference = b.getTime() - a.getTime();
   var diff_day = difference / (1000 * 3600 * 24);
 
-  return (
-    <div
-      className={
-        diff_day < 7
-          ? `${props.style_.new} ${props.classList}`
-          : `${props.style_.old} ${props.classList}`
-      }
-    >
-      {props.children}
-    </div>
-  );
+  if (props.type === "button") {
+    return (
+      <button
+        className={
+          diff_day < 7
+            ? `${props.style_.new} ${props.classList}`
+            : `${props.style_.old} ${props.classList}`
+        }
+        onClick={props.onClick}
+      >
+        {props.children}
+      </button>
+    );
+  } else {
+    return (
+      <div
+        className={
+          diff_day < 7
+            ? `${props.style_.new} ${props.classList}`
+            : `${props.style_.old} ${props.classList}`
+        }
+      >
+        {props.children}
+      </div>
+    );
+  }
 };
 
 export default DateCheck;

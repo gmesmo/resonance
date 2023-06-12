@@ -54,6 +54,8 @@ h5 {
 .old h5 {
   border: gray 1px solid;
   border-radius: 2rem;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 @media (max-width: 1680px) {
