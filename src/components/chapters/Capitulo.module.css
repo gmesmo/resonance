@@ -1,10 +1,19 @@
+.main {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
 .chapt {
   text-align: justify;
-  padding: 15px 15%;
+  padding: 15px;
+
+  max-height: 150vh;
+
+  transition: max-height 5s;
 }
 
 div :has(> .chapt) {
-  height: calc(100dvh - 6rem);
   color: white;
   padding: 3rem;
   /* background: black; */
@@ -49,6 +58,11 @@ h5 {
   top: 0;
 
   background-color: orange;
+}
+
+.old {
+  width: 60%;
+  background-color: #444;
 }
 
 .old h5 {

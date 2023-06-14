@@ -16,7 +16,7 @@ const Capitulo = (props) => {
   let Texto = props.text.map((text) => (
     <Typewriter
       key={"typping"}
-      options={{ delay: 0.001 }}
+      options={{ delay: 1 }}
       onInit={(typewriter) => {
         typewriter.pauseFor(3000).typeString(text).start();
       }}
@@ -46,7 +46,7 @@ const Capitulo = (props) => {
     <>
       <DateCheck
         key={props.chaptNumber}
-        classList={``}
+        classList={`${styles.main}`}
         style_={styles}
         data={data_cap}
       >
