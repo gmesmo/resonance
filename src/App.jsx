@@ -1,5 +1,8 @@
+import React, { useDebugValue, useEffect } from "react";
+
 import styles from "./App.module.css";
 import Cover from "./components/cover/mark";
+import MaintenancePage from "./components/Maintenance/Maintenance";
 
 import Capitulo from "./components/chapters/Capitulo";
 
@@ -9,13 +12,9 @@ import ChapterSelector from "./components/UI/Menu/ChapterSelector";
 import { useState } from "react";
 
 function App() {
-  const Maintenace = true;
+  const Maintenance = true;
 
   const [page, setPage] = useState(<Cover />);
-
-  // if (Maintenace) {
-  //   setPage();
-  // }
 
   const onPageChange = (page) => {
     if (page === -1) {
@@ -34,6 +33,14 @@ function App() {
       );
     }
   };
+
+  if (Maintenance) {
+    return (
+      <div className="App">
+        <MaintenancePage />
+      </div>
+    );
+  }
 
   return (
     <div className="App">

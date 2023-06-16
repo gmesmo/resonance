@@ -1,11 +1,18 @@
 import React from "react";
 
-const Maintenace = () => {
+import styles from "./Maintenance.module.css";
+
+import { TbRoadOff } from "react-icons/tb";
+
+const MaintenancePage = () => {
   return (
     <>
-      <div></div>
+      <div className={styles.Maintenance}>
+        <TbRoadOff />
+        <p>Site em manutenção</p>
+      </div>
     </>
   );
 };
 
-export default Maintenace;
+export default MaintenancePage;

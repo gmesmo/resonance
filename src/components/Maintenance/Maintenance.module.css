@@ -1,0 +1,12 @@
+.Maintenance {
+  position: absolute;
+  inset: 0;
+
+  font-size: 20dvw;
+  text-align: center;
+}
+
+.Maintenance p {
+  margin: 0;
+  font-size: 26px;
+}
