@@ -8,7 +8,7 @@
   text-align: justify;
   padding: 15px;
 
-  max-height: 150vh;
+  max-height: 500vh;
 
   transition: max-height 5s;
 }

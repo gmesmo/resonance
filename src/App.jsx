@@ -9,7 +9,13 @@ import ChapterSelector from "./components/UI/Menu/ChapterSelector";
 import { useState } from "react";
 
 function App() {
+  const Maintenace = true;
+
   const [page, setPage] = useState(<Cover />);
+
+  // if (Maintenace) {
+  //   setPage();
+  // }
 
   const onPageChange = (page) => {
     if (page === -1) {
