@@ -1,0 +1,19 @@
+#Up {
+  color: var(--purple);
+}
+
+#Up div {
+  position: absolute;
+  top: 1rem;
+  right: -5rem;
+
+  z-index: 999;
+
+  color: white;
+
+  background-color: black;
+
+  padding: 0.5rem;
+
+  border-radius: 2rem;
+}

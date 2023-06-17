@@ -1,81 +1,81 @@
 @media (max-width: 768px) {
-    #cover img {
-        width: 70vw;
-    }
+  #cover img {
+    width: 70vw;
+  }
 
-    #cover div {
-        margin: unset;
-        width: 100%;
-    }
+  #cover div {
+    margin: unset;
+    width: 100%;
+  }
 
-    #cover div .logo_ {
-        height: 110%;
-    }
+  #cover div .logo_ {
+    height: 110%;
+  }
 }
 
 @media (min-width: 769px) {
-    #cover div {
-        width: 35%;
-    }
+  #cover div {
+    width: 35%;
+  }
 }
 
 #cover {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 #cover div {
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    height: 65dvh;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  height: 65dvh;
 }
 
 #cover div h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 #cover div .logo_ {
-    position: relative;
-    top: 35px;  
-    padding: 0;
-    min-height: 100%;
-    min-width: 100%;
+  position: relative;
+  top: 35px;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 #cover div .logo_ img {
-    position: absolute;
-    transform:translate(-50%, 10%);
-    transition: all 0.5s;
+  position: absolute;
+  transform: translate(-50%, 10%);
+  transition: all 0.5s;
 
-    height: 100%;
+  height: 100%;
 }
 
 #cover div .logo_:has(:hover) img {
-    top: -5%;
-    left: 50%;
-    filter: invert(1);
-} 
+  top: -5%;
+  left: 50%;
+  filter: invert(1);
+}
 
 #cover .logo_ img:nth-child(1) {
-    top: -9%;
-    left: 57%;
-    filter: invert(89%) sepia(86%) saturate(4856%) hue-rotate(359deg) brightness(105%) contrast(104%);
-    opacity: 0.7;
+  top: -9%;
+  left: 57%;
+  filter: var(--filter-yellow);
+  opacity: 0.7;
 }
 
 #cover .logo_ img:nth-child(2) {
-    top: 0%;
-    left: 50%;
-    filter: invert(29%) sepia(96%) saturate(5761%) hue-rotate(294deg) brightness(114%) contrast(131%);
-    opacity: 0.7;
+  top: 0%;
+  left: 50%;
+  filter: var(--filter-magenta);
+  opacity: 0.7;
 }
 
 #cover .logo_ img:nth-child(3) {
-    top: -9%;
-    left: 43%;
-    filter: invert(84%) sepia(60%) saturate(3115%) hue-rotate(113deg) brightness(112%) contrast(104%);
-    opacity: 0.7;
-    z-index: -1;
-    color: #00ffff;
+  top: -9%;
+  left: 43%;
+  filter: var(--filter-cyan);
+  opacity: 0.7;
+  z-index: -1;
+  color: #00ffff;
 }

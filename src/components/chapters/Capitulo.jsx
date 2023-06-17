@@ -57,7 +57,11 @@ const Capitulo = (props) => {
         <div className={`${styles.chapt} ${skip && styles.skipped}`}>
           {Texto}
         </div>
-        {!skip && <Button onClick={skipHandler}>SKIP</Button>}
+        {!skip && (
+          <Button classes={"skip"} onClick={skipHandler}>
+            SKIP
+          </Button>
+        )}
       </DateCheck>
     </>
   );

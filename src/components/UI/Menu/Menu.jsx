@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./Menu.module.css";
+import Down from "./sections/Down";
+import Up from "./sections/Up";
+import Button from "../Button/Button";
 
 const Menu = (props) => {
   return (
     <div id={styles.Menu}>
-      <section className={styles.Upper}>
+      <Up>
         <h1>Resonance</h1>
-      </section>
-      <section className={styles.Down}></section>
+        <Button classes={"default"}></Button>
+      </Up>
+      <Down />
     </div>
   );
 };

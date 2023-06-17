@@ -1,14 +1,30 @@
 :root {
   --orange: #ce4b00;
   --purple: #af04af;
+
+  --cyan: #00ffff;
+  --magenta: #ff00ff;
+  --yellow: #ffff00;
+
+  --dark-100: black;
+  --dark-90: #2b2b2b;
+  --white-90: #e2e2e2;
+  --white-100: white;
+
+  /* filters from black to color */
+  --filter-yellow: invert(89%) sepia(86%) saturate(4856%) hue-rotate(359deg)
+    brightness(105%) contrast(104%);
+  --filter-magenta: invert(29%) sepia(96%) saturate(5761%) hue-rotate(294deg)
+    brightness(114%) contrast(131%);
+  --filter-cyan: invert(84%) sepia(60%) saturate(3115%) hue-rotate(113deg)
+    brightness(112%) contrast(104%);
 }
 
 body {
-  background: #2b2b2b;
+  background: var(--dark-90);
   height: 100%;
 }
 
 section :is(h1, h2, h5) {
   text-align: center;
-  color: white;
 }
