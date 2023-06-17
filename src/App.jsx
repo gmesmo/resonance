@@ -10,9 +10,10 @@ import capitulos from "./components/chapters/list/chapters.json";
 
 import ChapterSelector from "./components/UI/Menu/ChapterSelector";
 import { useState } from "react";
+import Menu from "./components/UI/Menu/Menu";
 
 function App() {
-  const Maintenance = true;
+  const Maintenance = false;
 
   const [page, setPage] = useState(<Cover />);
 
@@ -44,7 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      <ChapterSelector pageChange={onPageChange} />
+      <Menu />
+      {/* <ChapterSelector pageChange={onPageChange} /> */}
 
       {page}
 
