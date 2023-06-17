@@ -54,7 +54,7 @@
 }
 
 .skip:hover {
-  box-shadow: rgb(175, 4, 175) 0px 0px 25px;
+  box-shadow: #af04af 0px 0px 25px;
 
   cursor: pointer;
 }
