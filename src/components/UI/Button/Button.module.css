@@ -90,3 +90,25 @@
     top: 0;
   }
 }
+
+label {
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+
+  padding: 0.75rem;
+
+  background-color: black;
+
+  transition: all 1s;
+
+  border-radius: 3rem;
+}
+
+input:checked + label {
+  right: 0;
+}
