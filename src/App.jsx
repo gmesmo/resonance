@@ -11,6 +11,7 @@ import capitulos from "./components/chapters/list/chapters.json";
 import ChapterSelector from "./components/UI/Menu/ChapterSelector";
 import { useState } from "react";
 import Menu from "./components/UI/Menu/Menu";
+import Config from "./components/config/Config";
 
 function App() {
   const Maintenance = false;
@@ -56,6 +57,7 @@ function App() {
         data={prologo.date}
         text={prologo.text}
       /> */}
+      <Config />
     </div>
   );
 }

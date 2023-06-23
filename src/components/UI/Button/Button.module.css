@@ -141,3 +141,31 @@
 .default[aria-expanded="true"] .bottom {
   rotate: -45deg;
 }
+
+.config {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+
+  font-size: 2rem;
+  animation: rotating 1s infinite linear;
+  animation-play-state: paused;
+}
+
+@keyframes rotating {
+  100% {
+    rotate: 45deg;
+  }
+}
+
+.config:hover {
+  animation-play-state: running;
+}
+
+.config.open {
+  color: violet;
+}
+
+.config.closed {
+  color: aqua;
+}

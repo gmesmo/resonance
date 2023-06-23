@@ -9,10 +9,11 @@ const Button = (props) => {
 
   const key_id = props.key_id;
 
+  const menuOpenHandler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   if (key_id === "menu") {
-    const menuOpenHandler = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
     return (
       <>
         <button
@@ -56,6 +57,15 @@ const Button = (props) => {
           </svg>
         </button>
       </>
+    );
+  } else if (key_id === "config") {
+    return (
+      <RxGear
+        className={`${styles.config} ${
+          isMenuOpen ? styles.open : styles.closed
+        }`}
+        onClick={menuOpenHandler}
+      />
     );
   }
 
