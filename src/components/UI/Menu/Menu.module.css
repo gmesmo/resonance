@@ -12,8 +12,48 @@
 
   background-color: black;
   transition: all 1s;
+
+  z-index: 10;
 }
 
 #Menu:has(button[data-state="closed"]) {
   transform: translateX(-100%);
+}
+
+#Menu:has(button[data-state="closed"]) h1 {
+  transform: translateX(-100%);
+}
+
+@media (max-width: 768px) {
+  #Menu {
+    width: 100dvw;
+  }
+}
+
+#Menu section section button {
+  animation: showing ease-in-out;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  animation-delay: unset;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 1s;
+}
+
+#Menu:has(button[data-state="open"]) section section button {
+  animation-play-state: running;
+}
+
+#Menu:has(button[data-state="closed"]) section section button {
+  transform: translate(0);
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes showing {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s;
+  }
 }

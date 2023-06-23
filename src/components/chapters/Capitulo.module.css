@@ -9,7 +9,7 @@
   text-align: justify;
   padding: 15px;
 
-  max-height: 500vh;
+  max-height: 5000dvh;
 
   transition: max-height 5s;
 }
@@ -80,6 +80,10 @@ h5 {
 }
 
 @media (max-width: 768px) {
+  .main {
+    width: calc(100dvw - 2rem);
+  }
+
   .chapt {
     padding: 15px;
     padding-bottom: 5rem;

@@ -13,6 +13,7 @@ const ChapterMiniature = (props) => {
     <>
       <DateCheck
         key={props.number}
+        number={props.number}
         classList={`${styles.chapterMiniature}`}
         style_={styles}
         onClick={selectChapterHandler}
