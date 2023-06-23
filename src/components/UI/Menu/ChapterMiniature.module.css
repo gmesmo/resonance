@@ -71,7 +71,7 @@
 
 @media (min-width: 768px) {
   .chapterMiniature {
-    width: 45%;
+    width: calc(100% - 0.6rem);
     margin-left: 0.3rem;
 
     font-size: 1.1rem;
@@ -79,7 +79,6 @@
     transition: all 0.5s;
 
     justify-content: center;
-    aspect-ratio: 1;
     border-radius: 1rem;
 
     position: relative;

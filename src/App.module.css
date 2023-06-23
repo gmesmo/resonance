@@ -11,8 +11,10 @@
   --white-90: #e2e2e2;
   --white-100: white;
 
-  --writing-color: white;
-  --background-color: black;
+  --writing-color: black;
+  --background-color: var(--white-90);
+
+  --invert: 0;
 
   /* filters from black to color */
   --filter-yellow: invert(89%) sepia(86%) saturate(4856%) hue-rotate(359deg)
@@ -23,9 +25,19 @@
     brightness(112%) contrast(104%);
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --writing-color: white;
+    --background-color: var(--dark-90);
+    --invert: 1;
+  }
+}
+
 body {
-  background: var(--dark-90);
-  height: 100%;
+  margin: 0 !important;
+
+  background: var(--background-color);
+  color: var(--writing-color);
 }
 
 section :is(h1, h2, h5) {

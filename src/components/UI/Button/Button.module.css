@@ -91,24 +91,53 @@
   }
 }
 
-label {
+.default {
   position: absolute;
-  top: 1rem;
-  right: -4rem;
+  top: 1.25rem;
+  right: 0.5rem;
+  background-color: var(--background-color);
 
   width: 1.5rem;
   height: 1.5rem;
-  line-height: 1.5rem;
 
-  padding: 0.75rem;
-
-  background-color: black;
+  padding: 1.2rem;
 
   transition: all 1s;
 
   border-radius: 3rem;
+  border: none;
 }
 
-input:checked + label {
-  right: 0;
+.default svg {
+  position: absolute;
+  inset: 0.45rem;
+}
+
+.default[aria-expanded="true"] {
+  filter: invert(1);
+}
+
+.default .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.default[aria-expanded="true"] .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+.default[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.default[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.default[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.default[aria-expanded="true"] .bottom {
+  rotate: -45deg;
 }

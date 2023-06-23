@@ -2,18 +2,11 @@
   color: var(--purple);
 }
 
-#Up button {
+#Up button[aria-expanded="false"] {
   position: absolute;
-  top: 1rem;
-  right: -3rem;
+  right: -3.25rem;
 
   z-index: 999;
 
   color: black;
-  background-color: white;
-
-  padding: 0.5rem;
-
-  border-radius: 2rem;
-  border: none;
 }

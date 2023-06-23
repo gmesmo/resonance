@@ -1,7 +1,8 @@
 .main {
-  width: 60%;
+  min-width: 60dvw;
   margin: 0 auto;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .chapt {
@@ -104,5 +105,5 @@ h5 {
 
 .skipped p {
   animation: fade_in 3s;
-  transition: 0.5s all;
+  /* transition: 0.5s all; */
 }

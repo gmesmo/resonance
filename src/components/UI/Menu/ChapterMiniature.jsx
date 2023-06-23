@@ -21,7 +21,7 @@ const ChapterMiniature = (props) => {
         <NumberVerify className={styles.chaptNumber} number={props.number}>
           {`Capítulo - ${props.number}`}
         </NumberVerify>
-        {props.number > 0 && <br />}
+        {props.number > 0 && " | "}
         {props.title}
       </DateCheck>
     </>

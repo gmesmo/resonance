@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      <Menu />
+      <Menu pageChange={onPageChange} />
       {/* <ChapterSelector pageChange={onPageChange} /> */}
 
       {page}

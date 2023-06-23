@@ -1,22 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./Button.module.css";
 
+import { RxGear } from "react-icons/rx";
+
 const Button = (props) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const key_id = props.key_id;
 
   if (key_id === "menu") {
+    const menuOpenHandler = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
     return (
       <>
-        <input
+        <button
           key={key_id}
           id={key_id}
           className={styles[props.classes]}
-          onClick={props.onClick}
-          type={"checkbox"}
-          style={{ display: "none" }}
-        />
-        <label htmlFor={key_id}>{props.children}</label>
+          onClick={menuOpenHandler}
+          aria-expanded={isMenuOpen}
+          data-state={isMenuOpen ? "open" : "closed"}
+        >
+          <svg
+            fill="var(--writing-color)"
+            className={styles.hamburger}
+            viewBox="0 0 100 100"
+            width="1.5rem"
+          >
+            <rect
+              className={`${styles.line} ${styles.top}`}
+              width="80"
+              height="5"
+              x="10"
+              y="25"
+              rx="5"
+            ></rect>
+            <rect
+              className={`${styles.line} ${styles.middle}`}
+              width="80"
+              height="5"
+              x="10"
+              y="45"
+              rx="5"
+            ></rect>
+            <rect
+              className={`${styles.line} ${styles.bottom}`}
+              width="80"
+              height="5"
+              x="10"
+              y="65"
+              rx="5"
+            ></rect>
+          </svg>
+        </button>
       </>
     );
   }
@@ -29,3 +67,19 @@ const Button = (props) => {
 };
 
 export default Button;
+
+// const buttons = document.querySelectorAll("button");
+
+// buttons.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     const currentState = button.getAttribute("data-state");
+
+//     if (!currentState || currentState === "closed") {
+//       button.setAttribute("data-state", "opened");
+//       button.setAttribute("aria-expanded", "true");
+//     } else {
+//       button.setAttribute("data-state", "closed");
+//       button.setAttribute("aria-expanded", "false");
+//     }
+//   });
+// });

@@ -21,7 +21,8 @@
 
 #cover {
   display: flex;
-  height: 100vh;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 #cover div {
@@ -54,7 +55,7 @@
 #cover div .logo_:has(:hover) img {
   top: -5%;
   left: 50%;
-  filter: invert(1);
+  filter: invert(var(--invert));
 }
 
 #cover .logo_ img:nth-child(1) {
@@ -77,5 +78,4 @@
   filter: var(--filter-cyan);
   opacity: 0.7;
   z-index: -1;
-  color: #00ffff;
 }
