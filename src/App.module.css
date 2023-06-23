@@ -13,6 +13,7 @@
 
   --writing-color: black;
   --background-color: var(--white-90);
+  --menu-background: white;
 
   --invert: 0;
 
@@ -29,6 +30,8 @@
   :root {
     --writing-color: white;
     --background-color: var(--dark-90);
+    --menu-background: black;
+
     --invert: 1;
   }
 }

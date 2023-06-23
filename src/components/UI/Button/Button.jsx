@@ -60,12 +60,14 @@ const Button = (props) => {
     );
   } else if (key_id === "config") {
     return (
-      <RxGear
-        className={`${styles.config} ${
-          isMenuOpen ? styles.open : styles.closed
-        }`}
-        onClick={menuOpenHandler}
-      />
+      <div id={styles.config_menu}>
+        <RxGear
+          className={`${styles.config} ${
+            isMenuOpen ? styles.open : styles.closed
+          }`}
+          onClick={menuOpenHandler}
+        />
+      </div>
     );
   }
 
