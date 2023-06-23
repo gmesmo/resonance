@@ -20,9 +20,9 @@ const Button = (props) => {
           key={key_id}
           id={key_id}
           className={styles[props.classes]}
-          onClick={menuOpenHandler}
-          aria-expanded={isMenuOpen}
-          data-state={isMenuOpen ? "open" : "closed"}
+          onClick={props.onClick}
+          aria-expanded={props.menuStatus}
+          data-state={props.menuStatus ? "open" : "closed"}
         >
           <svg
             fill="var(--writing-color)"

@@ -31,29 +31,15 @@
 }
 
 #Menu section section button {
-  animation: showing ease-in-out;
-  animation-play-state: paused;
-  animation-fill-mode: forwards;
-  animation-delay: unset;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: all 1s;
+  transition: transform 1s, opacity 1s;
 }
 
 #Menu:has(button[data-state="open"]) section section button {
-  animation-play-state: running;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 #Menu:has(button[data-state="closed"]) section section button {
-  transform: translate(0);
+  transform: translate(-50%);
   opacity: 0;
-  animation: none;
-}
-
-@keyframes showing {
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 1s;
-  }
 }

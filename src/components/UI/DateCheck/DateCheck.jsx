@@ -22,8 +22,8 @@ const DateCheck = (props) => {
         }
         onClick={props.onClick}
         style={{
-          animationDelay: `${(props.number + 1) * 0.25}s`,
-          animationDuration: `${1}s`,
+          transitionDelay: `${(props.number + 1) * 0.25}s`,
+          transitionDuration: `${1}s`,
         }}
       >
         {props.children}
