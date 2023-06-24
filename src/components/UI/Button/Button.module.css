@@ -158,7 +158,7 @@
 
   position: fixed;
   bottom: 2rem;
-  right: 0rem;
+  right: -4.5rem;
 
   transition: all 1s;
 }
@@ -172,7 +172,7 @@
 }
 
 #config_menu:has(.config.open) {
-  right: -4.5rem;
+  right: 0rem;
 }
 
 .config {
