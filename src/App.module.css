@@ -17,6 +17,15 @@
 
   --invert: 0;
 
+  --background-image: radial-gradient(
+    circle,
+    #ffffff,
+    #d4d1f5,
+    #a6a4ea,
+    #707bdf,
+    #0055d4
+  );
+
   /* filters from black to color */
   --filter-yellow: invert(89%) sepia(86%) saturate(4856%) hue-rotate(359deg)
     brightness(105%) contrast(104%);
@@ -33,13 +42,22 @@
     --menu-background: black;
 
     --invert: 1;
+
+    --background-image: radial-gradient(
+      circle,
+      #4d007f,
+      #27176e,
+      #011a58,
+      #00163e,
+      #000e23
+    );
   }
 }
 
 body {
   margin: 0 !important;
 
-  background: var(--background-color);
+  background: var(--background-image);
   color: var(--writing-color);
 }
 

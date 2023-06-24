@@ -15,7 +15,7 @@
 }
 
 div :has(> .chapt) {
-  color: white;
+  color: var(--writing-color);
   padding: 3rem;
   /* background: black; */
 }
@@ -38,7 +38,7 @@ h5 {
 }
 
 .new h5 {
-  border: orange 1px solid;
+  border: var(--orange) 1px solid;
   border-radius: 2rem;
 
   text-align: left;
@@ -58,12 +58,12 @@ h5 {
   right: 0;
   top: 0;
 
-  background-color: orange;
+  background-color: var(--orange);
 }
 
 .old {
   width: 60%;
-  background-color: #444;
+  background-color: var(--background-color);
 }
 
 .old h5 {

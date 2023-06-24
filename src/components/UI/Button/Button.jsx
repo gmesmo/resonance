@@ -3,6 +3,42 @@ import React, { useState } from "react";
 import styles from "./Button.module.css";
 
 import { RxGear } from "react-icons/rx";
+import { BsCircleHalf, BsCircleFill, BsCircle } from "react-icons/bs";
+
+const LightSwitch = () => {
+  const [isLightOn, setIsLightOn] = useState(false);
+  const [isMouseOver, setIsMouseOver] = useState(false);
+
+  const mouseOverHandler = () => {
+    setIsMouseOver(true);
+  };
+
+  const mouseLeaveHandler = () => {
+    setIsMouseOver(false);
+  };
+
+  const iconRender = () => {
+    if (isLightOn) {
+      return <BsCircle />;
+    } else {
+      return <BsCircleFill />;
+    }
+  };
+
+  const lightSwitchHandler = () => {
+    setIsLightOn(!isLightOn);
+  };
+
+  return (
+    <div
+      onMouseEnter={mouseOverHandler}
+      onMouseLeave={mouseLeaveHandler}
+      onClick={lightSwitchHandler}
+    >
+      {isMouseOver ? iconRender() : <BsCircleHalf />}
+    </div>
+  );
+};
 
 const Button = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,15 +94,20 @@ const Button = (props) => {
         </button>
       </>
     );
-  } else if (key_id === "config") {
+  }
+
+  if (key_id === "config") {
     return (
       <div id={styles.config_menu}>
-        <RxGear
-          className={`${styles.config} ${
-            isMenuOpen ? styles.open : styles.closed
-          }`}
-          onClick={menuOpenHandler}
-        />
+        <div className={styles.icon}>
+          <RxGear
+            className={`${styles.config} ${
+              isMenuOpen ? styles.open : styles.closed
+            }`}
+            onClick={menuOpenHandler}
+          />
+        </div>
+        <div className={styles.configOptions}>{<LightSwitch />}</div>
       </div>
     );
   }
