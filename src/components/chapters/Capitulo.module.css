@@ -103,7 +103,7 @@ h5 {
     color: transparent;
   }
   100% {
-    color: white;
+    color: var(--writing-color);
   }
 }
 
