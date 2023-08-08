@@ -45,7 +45,7 @@ h5 {
 
   position: relative;
 
-  text-indent: 2%;
+  text-indent: -3%;
 }
 
 .new h5::after {
@@ -61,7 +61,7 @@ h5 {
   background-color: var(--orange);
 }
 
-.old {
+.main {
   width: 60%;
   background-color: var(--background-color);
 }
