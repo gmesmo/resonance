@@ -32,6 +32,8 @@ const DateCheck = (props) => {
       </button>
     );
   } else {
+    console.log("log: " + diff_day);
+
     return (
       <div
         className={

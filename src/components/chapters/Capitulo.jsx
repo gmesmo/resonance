@@ -40,7 +40,7 @@ const Capitulo = (props) => {
 
   const chaptNumber = props.chaptNumber - 1;
 
-  let data_cap = moment(props.data, "YYYY-MM-DD").format("L");
+  // let data_cap = moment(props.data, "YYYY-MM-DD").format("L"); NO NEED TO FORMAT BEFORE, DATECHECK DOES IT
 
   return (
     <>
@@ -48,7 +48,7 @@ const Capitulo = (props) => {
         key={props.chaptNumber}
         classList={`${styles.main}`}
         style_={styles}
-        data={data_cap}
+        data={props.data}
       >
         <h2>
           {chaptNumber > 0 ? `Capítulo ${chaptNumber} - ` : ``} {props.title}
