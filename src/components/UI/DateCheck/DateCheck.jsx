@@ -6,13 +6,15 @@ import "moment/locale/pt-br";
 const DateCheck = (props) => {
   // const [data, setData] = useState(moment(props.data, "DDMMYYYY").fromNow());
 
-  var a = new Date(moment(props.data, "DDMMYYYY"));
+  var a = new Date(moment(props.data, "YYYYMMDD"));
   var b = new Date();
 
   var difference = b.getTime() - a.getTime();
   var diff_day = difference / (1000 * 3600 * 24);
 
   if (props.type === "button") {
+    console.log(diff_day);
+
     return (
       <button
         className={
