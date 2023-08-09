@@ -44,7 +44,7 @@ const ChapterSelector = (props) => {
       <div>
         {Chapters.chapters.map(
           (chapt, i) =>
-            chapt.number < 3 && ( //condição para capítulos BETA
+            chapt.number < 4 && ( //condição para capítulos BETA
               <ChapterMiniature
                 key={chapt.number}
                 title={chapt.title}
