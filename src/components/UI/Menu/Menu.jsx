@@ -31,18 +31,15 @@ const Menu = (props) => {
           menuStatus={isMenuOpen}
         />
         <section className={styles.chapters}>
-          {Chapters.chapters.map(
-            (chapt, i) =>
-              chapt.number < 4 && ( //condição para capítulos BETA
-                <ChapterMiniature
-                  key={chapt.number}
-                  title={chapt.title}
-                  number={chapt.number}
-                  release={chapt.release}
-                  selectedChapter={selectedChapterHandler}
-                />
-              )
-          )}
+          {Chapters.chapters.map((chapt, i) => (
+            <ChapterMiniature
+              key={chapt.number}
+              title={chapt.title}
+              number={chapt.number}
+              release={chapt.release}
+              selectedChapter={selectedChapterHandler}
+            />
+          ))}
         </section>
       </Up>
       <Down />

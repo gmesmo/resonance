@@ -17,6 +17,14 @@ function App() {
   const Maintenance = false;
 
   const [page, setPage] = useState(<Cover />);
+  // const [storage, setStorage] = useState([]);
+
+  // useEffect(() => {
+  //   const storage = JSON.parse(localStorage.getItem("storage"));
+  //   if (storage) {
+  //     setStorage(storage);
+  //   }
+  // }, []);
 
   const onPageChange = (page) => {
     if (page === -1) {

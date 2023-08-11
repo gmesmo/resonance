@@ -42,18 +42,15 @@ const ChapterSelector = (props) => {
   return (
     <div id={styles.Menu} className={isOpen ? styles.active : ""}>
       <div>
-        {Chapters.chapters.map(
-          (chapt, i) =>
-            chapt.number < 4 && ( //condição para capítulos BETA
-              <ChapterMiniature
-                key={chapt.number}
-                title={chapt.title}
-                number={chapt.number}
-                release={chapt.release}
-                selectedChapter={selectedChapterHandler}
-              />
-            )
-        )}
+        {Chapters.chapters.map((chapt, i) => (
+          <ChapterMiniature
+            key={chapt.number}
+            title={chapt.title}
+            number={chapt.number}
+            release={chapt.release}
+            selectedChapter={selectedChapterHandler}
+          />
+        ))}
       </div>
       {renderButton()}
     </div>
