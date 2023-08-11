@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./ChapterMiniature.module.css";
 import NumberVerify from "./NumberVerify";
 import DateCheck from "../DateCheck/DateCheck";
-import { Textfit } from "react-textfit";
 
 const ChapterMiniature = (props) => {
   const selectChapterHandler = () => {
@@ -21,14 +20,12 @@ const ChapterMiniature = (props) => {
         type={"button"}
         data={props.release}
       >
-        <Textfit mode="single" max={18}>
-          <NumberVerify className={styles.chaptNumber} number={props.number}>
-            {`Capítulo - ${props.number}`}
-          </NumberVerify>
+        <NumberVerify className={styles.chaptNumber} number={props.number}>
+          {`Capítulo - ${props.number}`}
+        </NumberVerify>
 
-          {props.number > 0 && " | "}
-          {props.title}
-        </Textfit>
+        {props.number > 0 && " | "}
+        {props.title}
       </DateCheck>
     </>
   );
