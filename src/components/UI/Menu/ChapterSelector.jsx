@@ -52,6 +52,7 @@ const ChapterSelector = (props) => {
           />
         ))}
       </div>
+
       {renderButton()}
     </div>
   );
