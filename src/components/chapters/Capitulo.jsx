@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import ReactHtmlParser from "react-html-parser";
-
 import styles from "./Capitulo.module.css";
 import Typewriter from "typewriter-effect";
 
