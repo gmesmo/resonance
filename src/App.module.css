@@ -54,6 +54,10 @@
   }
 }
 
+html {
+  min-height: 100dvh;
+}
+
 body {
   margin: 0 !important;
 

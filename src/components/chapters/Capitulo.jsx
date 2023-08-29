@@ -23,20 +23,20 @@ const Capitulo = (props) => {
     />
   ));
 
-  // if (skip) {
-  //   Texto = props.text.map((text) => {
-  //     ReactHtmlParser(text);
-  //   });
+  if (skip) {
+    // Texto = props.text.map((text) => {
+    //   ReactHtmlParser(text);
+    // });
 
-  //   // props.text.map((text) => (
-  //   //   <Typewriter
-  //   //     key={"skipped"}
-  //   //     onInit={(typewriter) => {
-  //   //       typewriter.pasteString(text).start();
-  //   //     }}
-  //   //   />
-  //   // ));
-  // }
+    Texto = props.text.map((text) => (
+      <Typewriter
+        key={"skipped"}
+        onInit={(typewriter) => {
+          typewriter.pasteString(text).start();
+        }}
+      />
+    ));
+  }
 
   const skipHandler = () => {
     setSkip(true);
@@ -59,7 +59,7 @@ const Capitulo = (props) => {
         </h2>
         <h5>Lançamento: {data_cap}</h5>
         <div className={`${styles.chapt} ${skip && styles.skipped}`}>
-          {!skip ? Texto : props.text}
+          {Texto}
         </div>
         {!skip && (
           <Button classes={"skip"} onClick={skipHandler}>
