@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import ReactHtmlParser from "react-html-parser";
+
 import styles from "./Capitulo.module.css";
 import Typewriter from "typewriter-effect";
 
@@ -23,16 +25,20 @@ const Capitulo = (props) => {
     />
   ));
 
-  if (skip) {
-    Texto = props.text.map((text) => (
-      <Typewriter
-        key={"skipped"}
-        onInit={(typewriter) => {
-          typewriter.pasteString(text).start();
-        }}
-      />
-    ));
-  }
+  // if (skip) {
+  //   Texto = props.text.map((text) => {
+  //     ReactHtmlParser(text);
+  //   });
+
+  //   // props.text.map((text) => (
+  //   //   <Typewriter
+  //   //     key={"skipped"}
+  //   //     onInit={(typewriter) => {
+  //   //       typewriter.pasteString(text).start();
+  //   //     }}
+  //   //   />
+  //   // ));
+  // }
 
   const skipHandler = () => {
     setSkip(true);
@@ -55,7 +61,7 @@ const Capitulo = (props) => {
         </h2>
         <h5>Lançamento: {data_cap}</h5>
         <div className={`${styles.chapt} ${skip && styles.skipped}`}>
-          {Texto}
+          {!skip ? Texto : props.text}
         </div>
         {!skip && (
           <Button classes={"skip"} onClick={skipHandler}>
