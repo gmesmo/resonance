@@ -40,6 +40,7 @@ const Capitulo = (props) => {
 
   const skipHandler = () => {
     setSkip(true);
+    console.log("Skipped");
   };
 
   const chaptNumber = props.chaptNumber - 1;
